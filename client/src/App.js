@@ -12,7 +12,8 @@ import Nav from "./components/Nav";
 import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+
+const store = createStore(reducer);
 
 const client = new ApolloClient({
   request: (operation) => {
