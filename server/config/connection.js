@@ -1,14 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const password = process.env.MONGODB_PASSWORD;
 
-mongoose.connect(process.env.MONGODB_URI ||
-   `mongodb+srv://TinyVail:${password}@cluster0.nf8bc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+mongoose.connect(
+  process.env.MONGODB_URI ||
+    `mongodb+srv://TinyVail:${password}@cluster0.nf8bc.mongodb.net/mernshopping?retryWrites=true&w=majority`,
   {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-});
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
+);
 
 module.exports = mongoose.connection;
